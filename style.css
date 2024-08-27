@@ -2,24 +2,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #222;
-    display: flex;  
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: changeBg 81s infinite, fadeEffect 81s infinite;
+    z-index: -1; 
+}
+
+@keyframes changeBg {
+    0% { background-image: url('bgImage/bg1.jpg'); }
+    11.11% { background-image: url('bgImage/bg2.jpg'); }
+    22.22% { background-image: url('bgImage/bg3.jpg'); }
+    33.33% { background-image: url('bgImage/bg4.jpg'); }
+    44.44% { background-image: url('bgImage/bg5.jpg'); }
+    55.55% { background-image: url('bgImage/bg6.jpg'); }
+    66.66% { background-image: url('bgImage/bg7.jpg'); }
+    77.77% { background-image: url('bgImage/bg8.jpg'); }
+    88.88% { background-image: url('bgImage/bg9.jpg'); }
+    100% { background-image: url('bgImage/bg1.jpg'); }
+}
+
+@keyframes fadeEffect {
+    0%, 11.11%, 22.22%, 33.33%, 44.44%, 55.55%, 66.66%, 77.77%, 88.88%, 100% {
+        opacity: 1;
+    }
+    5.55%, 16.66%, 27.77%, 38.88%, 50%, 61.11%, 72.22%, 83.33%, 94.44% {
+        opacity: 1;
+    }
 }
 
 .card {
-    width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #feba, #5b548a);
+    z-index: 10;
+    position: relative;
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.8), rgba(25, 25, 112, 0.8));
     color: #fff;
-    margin: 20px;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    max-width: 470px;
+    width: 90%;
 }
 
 .search {
@@ -55,14 +100,17 @@ body {
 .search img {
     width: 16px;
 }
+
 .weather-icon {
     width: 170px;
     margin: 30px;
 }
+
 .weather h1 {
     font-size: 80px;
     font-weight: 500;
 }
+
 .weather h2 {
     font-size: 45px;
     font-weight: 400;
@@ -76,16 +124,31 @@ body {
     padding: 0 20px;
     margin-top: 50px;
 }
+
 .col {
     display: flex;
     align-items: center;
     text-align: left;
 }
+
 .col img {
     width: 40px;
     margin-right: 10px;
 }
+
 .humidity, .wind {
     font-size: 28px;
     margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
 }
