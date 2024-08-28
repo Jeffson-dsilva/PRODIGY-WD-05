@@ -53,15 +53,15 @@ checkWeather(city);
 
 
     const bgImages = [
-        "bgImage/bg1.jpg",
-        "bgImage/bg2.jpg",
-        "bgImage/bg3.jpg",
-        "bgImage/bg4.jpg",
-        "bgImage/bg5.jpg",
-        "bgImage/bg6.jpg",
-        "bgImage/bg7.jpg",
-        "bgImage/bg8.jpg",
-        "bgImage/bg9.jpg"
+        "bgImages/bg1.jpg",
+        "bgImages/bg2.jpg",
+        "bgImages/bg3.jpg",
+        "bgImages/bg4.jpg",
+        "bgImages/bg5.jpg",
+        "bgImages/bg6.jpg",
+        "bgImages/bg7.jpg",
+        "bgImages/bg8.jpg",
+        "bgImages/bg9.jpg"
     ];
 
     bgImages.forEach(image => {
