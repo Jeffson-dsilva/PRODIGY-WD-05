@@ -52,20 +52,5 @@ const apiKey = "78236e1f4b92cdd51d41141f767420c1";
 checkWeather(city);
 
 
-    const bgImages = [
-        "bgImages/bg1.jpg",
-        "bgImages/bg2.jpg",
-        "bgImages/bg3.jpg",
-        "bgImages/bg4.jpg",
-        "bgImages/bg5.jpg",
-        "bgImages/bg6.jpg",
-        "bgImages/bg7.jpg",
-        "bgImages/bg8.jpg",
-        "bgImages/bg9.jpg"
-    ];
 
-    bgImages.forEach(image => {
-        const img = new Image();
-        img.src = image;
-    });
 
