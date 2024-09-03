@@ -47,10 +47,10 @@ const apiKey = "78236e1f4b92cdd51d41141f767420c1";
     
     searchBtn.addEventListener("click", () => {
         checkWeather(searchBox.value);
-    })
+    });
 
-checkWeather(city);
-
-
-
-
+    searchBox.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            checkWeather(searchBox.value);
+        }
+    });
