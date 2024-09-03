@@ -14,14 +14,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
     background-color: rgba(150, 144, 232, 0.468);
 }
 
 .card {
-    z-index: 1;
-    position: relative;
     background: linear-gradient(135deg, rgba(70, 130, 180, 0.8), rgba(25, 25, 112, 0.8));
     color: #fff;
     border-radius: 20px;
